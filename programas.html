@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas - EvoGym</title>
+
+</head>
+<link rel="stylesheet" href="programas.css">
+<link rel="stylesheet" href="msv.css">
+<body>
+    
+    <div class="principal">
+        <nav>
+          <div class="logo">EvoGym</div>
+                  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      
+          <ul class="menu"> 
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="calendario.html">Clases</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+      </nav>
+
+      
+      </div>
+    <section class="programas">
+        <h1>Nuestros Programas</h1>
+        <div class="busqueda">
+            <form id="busqueda-form">
+                <select id="categoria">
+                    <option value="">Selecciona Categoría</option>
+                    <option value="fuerza-acondicionamiento">Fuerza y Acondicionamiento</option>
+                    <option value="perdida-peso"> Pérdida de Peso</option>
+                    <option value="entrenamiento-funcional"> Entrenamiento Funcional</option>
+                    <option value="atletas"> Atletas</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="zumba">Zumba</option>
+                    <option value="abs">Abs</option>
+                    <option value="spinning">Spinning</option>
+                    <option value="calistenia">Calistenia</option>
+                </select>
+                <select id="autor">
+                    <option value="">Selecciona Autor</option>
+                    <option value="nicolas-cabrera">Nicolas Cabrera</option>
+                    <option value="franco-sosa">Franco Sosa</option>
+                    <option value="dario-perez">Dario Perez</option>
+                    <option value="silvia-puigs">Silvia Puigs</option>
+                    <option value="mauro-castillo">Mauro Castillo</option>
+                    <option value="felipe-sutton">Felipe Sutton</option>
+                    <option value="juelita-zacarro">Julieta Zacarro</option>
+                </select>
+                <select id="nivel">
+                    <option value="">Selecciona Nivel</option>
+                    <option value="principiante">Principiante</option>
+                    <option value="intermedio">Intermedio</option>
+                    <option value="avanzado">Avanzado</option>
+                </select>
+                <select id="duracion">
+                    <option value="">Selecciona Duración</option>
+                    <option value="1hs">1 hora</option>
+                    <option value="1.5hs">1.5 horas</option>
+                    
+                </select>
+                <button type="button" onclick="filtrarProgramas()">Buscar</button>
+            </form>
+        </div>
+        <div class="programas-contenido" id="programas-contenido">
+            <!-- Programas de Fuerza y Acondicionamiento -->
+          
+            <div class="programa" data-categoria="fuerza-acondicionamiento" data-autor="juelita-zacarro" data-nivel="principiante" data-duracion="1hs">
+                <img src="fuerza.jpg" alt="Programa de Fuerza y Acondicionamiento">
+                <h3>Programa de Fuerza y Acondicionamiento</h3>
+                <p>Julieta Zacarro, Principiante - Intermedio, Duración: 1 hora</p>
+            </div>
+
+            <!-- Programas de Pérdida de Peso -->
+            <div class="programa" data-categoria="perdida-peso" data-autor="dario-perez" data-nivel="principiante" data-duracion="1hs">
+                <img src="perdidadepeso.jpg" alt="Programa de Pérdida de Peso">
+                <h3>Programa de Pérdida de Peso</h3>
+                <p>Dario Perez, Principiante - Intermedio - Avanzado, Duración: 1 hora</p>
+            </div>
+
+            <!-- Programas de Entrenamiento Funcional -->
+            <div class="programa" data-categoria="entrenamiento-funcional" data-autor="silvia-puigs" data-nivel="principiante" data-duracion="1hs">
+                <img src="funcional.jpg" alt="Programa de Entrenamiento Funcional">
+                <h3>Programa de Entrenamiento Funcional</h3>
+                <p>Silvia Puigs, Principiante - Intermedio - Avanzado, Duración: 1 hora</p>
+            </div>
+            
+
+            <!-- Programas para Atletas -->
+            <div class="programa" data-categoria="atletas" data-autor="mauro-castillo" data-nivel="principiante" data-duracion="1.5hs">
+                <img src="img1.jpg" alt="Programa Para Atletas">
+                <h3>Programa Para Atletas</h3>
+                <p>Mauro Castillo, Principiante - Intermedio - Avanzado, Duración: 1.5 horas</p>
+            </div>
+
+            <!-- Programas de Yoga -->
+          
+            <div class="programa" data-categoria="yoga" data-autor="franco-sosa" data-nivel="principiante" data-duracion="1.5hs">
+                <img src="yoga.jpg" alt="Programa de Yoga">
+                <h3>Programa de Yoga</h3>
+                <p>Franco Sosa, Principiante - Intermedio - Avanzado, Duración: 1.5 horas</p>
+            </div>
+
+            <!-- Programas de Zumba -->
+            <div class="programa" data-categoria="zumba" data-autor="silvia-puigs" data-nivel="todas" data-duracion="1.5hs">
+                <img src="zumba.jpg" alt="Programa de Zumba">
+                <h3>Programa de Zumba</h3>
+                <p>Silvia Puigs, Todas las edades, Duración: 1.5 horas</p>
+            </div>
+           
+
+            <!-- Programas de Abs -->
+            <div class="programa" data-categoria="abs" data-autor="nicolas-cabrera" data-nivel="principiante" data-duracion="1hs">
+                <img src="abs.jpg" alt="Programa de Abs">
+                <h3>Programa de Abs</h3>
+                <p>Nicolas Cabrera, Principiante - Intermedio - Avanzado, Duración: 1 hora</p>
+            </div>
+
+            <!-- Programas de Spinning -->
+            <div class="programa" data-categoria="spinning" data-autor="juelita-zacarro" data-nivel="todas" data-duracion="1hs">
+                <img src="sp.jpg" alt="Programa de Spinning">
+                <h3>Programa de Spinning</h3>
+                <p>Julieta Zacarro, Todas las edades, Duración: 1 hora</p>
+            </div>
+
+            <!-- Programas de Calistenia -->
+          
+            <div class="programa" data-categoria="calistenia" data-autor="felipe-sutton" data-nivel="principiante" data-duracion="1.5hs">
+                <img src="calistenia.jpg" alt="Programa de Calistenia">
+                <h3>Programa de Calistenia</h3>
+                <p>Felipe Sutton, Principiante - Intermedio - Avanzado, Duración: 1.5 horas</p>
+            </div>
+          
+        </div>
+        
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+
+    <script>
+        function filtrarProgramas() {
+            var categoria = document.getElementById('categoria').value;
+            var autor = document.getElementById('autor').value;
+            var nivel = document.getElementById('nivel').value;
+            var duracion = document.getElementById('duracion').value;
+            
+            var programas = document.querySelectorAll('.programa');
+            
+            programas.forEach(function(programa) {
+                var match = true;
+
+                if (categoria && programa.getAttribute('data-categoria') !== categoria) {
+                    match = false;
+                }
+                if (autor && programa.getAttribute('data-autor') !== autor) {
+                    match = false;
+                }
+                if (nivel && programa.getAttribute('data-nivel') !== nivel) {
+                    match = false;
+                }
+                if (duracion && programa.getAttribute('data-duracion') !== duracion) {
+                    match = false;
+                }
+
+                if (match) {
+                    programa.style.display = 'block';
+                } else {
+                    programa.style.display = 'none';
+                }
+            });
+        }
+        function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+
+    </script>
+</body>
+</html>

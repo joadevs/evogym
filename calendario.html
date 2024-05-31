@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios - Evogym</title>
+    <link rel="stylesheet" href="menu-calendario.css">
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="shortcut icon" href="2138354_dumbbells_gym_sport_weight_icon.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="principal">
+        <br>
+        <nav>
+          <div class="logo">EvoGym</div>
+                  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      
+          <ul class="menu"> 
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="programas.html">Programas</a></li>
+              <li><a href="calendario.html">Clases</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+      </nav>
+
+      
+      </div>
+      <br><br>
+    <div class="schedule-container">
+        <h1>Horarios</h1>
+        <br>
+        <div class="filter-container">
+            <br>
+            <label for="day-select">Día:</label>
+            <select id="day-select">
+                <option value="">Todos</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+            </select>
+
+            <label for="class-input">Nombre de la Clase:</label>
+            <input type="text" id="class-input" placeholder="Buscar clase...">
+            <label for="instructor-select">Instructor:</label>
+            <select id="instructor-select">
+                <option value="">Todos</option>
+                <option value="Julieta Zacarro">Julieta Zacarro</option>
+                <option value="Franco Sosa">Franco Sosa</option>
+                <option value="Silvia Puigs">Silvia Puigs</option>
+                <option value="Nicolas Cabrera">Nicolas Cabrera</option>
+                <option value="Felipe Sutton">Felipe Sutton</option>
+                <option value="Mauro Castillo">Mauro Castillo</option>
+                <option value="Dario Pérez">Dario Pérez</option>
+            </select>
+
+            <label for="time-select">Horario:</label>
+            <select id="time-select">
+                <option value="">Cualquiera</option>
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+                <option value="05:00 PM">05:00 PM</option>
+                <option value="06:00 PM">06:00 PM</option>
+                <option value="07:00 PM">07:00 PM</option>
+            </select>
+<br><br>
+            <label for="class-input">Nombre de la Clase:</label>
+            <input type="text" id="class-input" placeholder="Buscar clase...">
+
+            <button onclick="filterSchedule()">Buscar</button>
+            <br>
+        </div>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Hora</th>
+                    <th>Clase</th>
+                    <th>Instructor</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-body">
+                <!-- Lunes -->
+                <tr><td>Lunes</td><td>09:00 AM</td><td>Fuerza y Acondicionamiento</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Lunes</td><td>10:00 AM</td><td>Yoga</td><td>Franco Sosa</td></tr>
+                <tr><td>Lunes</td><td>11:00 AM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Lunes</td><td>12:00 PM</td><td>Spinning</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Lunes</td><td>04:00 PM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Lunes</td><td>04:00 PM</td><td>Abs</td><td>Nicolas Cabrera</td></tr>
+                <tr><td>Lunes</td><td>05:00 PM</td><td>Calistenia</td><td>Felipe Sutton</td></tr>
+                <tr><td>Lunes</td><td>06:00 PM</td><td>Entrenamiento Para Atletas</td><td>Mauro Castillo</td></tr>
+                <tr><td>Lunes</td><td>07:00 PM</td><td>Entrenamiento Para Pérdida de Peso</td><td>Dario Pérez</td></tr>
+
+                <!-- Martes -->
+                <tr><td>Martes</td><td>09:00 AM</td><td>Fuerza y Acondicionamiento</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Martes</td><td>10:00 AM</td><td>Yoga</td><td>Franco Sosa</td></tr>
+                <tr><td>Martes</td><td>11:00 AM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Martes</td><td>12:00 PM</td><td>Spinning</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Martes</td><td>04:00 PM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Martes</td><td>04:00 PM</td><td>Abs</td><td>Nicolas Cabrera</td></tr>
+                <tr><td>Martes</td><td>05:00 PM</td><td>Calistenia</td><td>Felipe Sutton</td></tr>
+                <tr><td>Martes</td><td>06:00 PM</td><td>Entrenamiento Para Atletas</td><td>Mauro Castillo</td></tr>
+                <tr><td>Martes</td><td>07:00 PM</td><td>Entrenamiento Para Pérdida de Peso</td><td>Dario Pérez</td></tr>
+
+                <!-- Miércoles -->
+                <tr><td>Miércoles</td><td>09:00 AM</td><td>Fuerza y Acondicionamiento</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Miércoles</td><td>10:00 AM</td><td>Yoga</td><td>Franco Sosa</td></tr>
+                <tr><td>Miércoles</td><td>11:00 AM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Miércoles</td><td>12:00 PM</td><td>Spinning</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Miércoles</td><td>04:00 PM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Miércoles</td><td>04:00 PM</td><td>Abs</td><td>Nicolas Cabrera</td></tr>
+                <tr><td>Miércoles</td><td>05:00 PM</td><td>Calistenia</td><td>Felipe Sutton</td></tr>
+                <tr><td>Miércoles</td><td>06:00 PM</td><td>Entrenamiento Para Atletas</td><td>Mauro Castillo</td></tr>
+                <tr><td>Miércoles</td><td>07:00 PM</td><td>Entrenamiento Para Pérdida de Peso</td><td>Dario Pérez</td></tr>
+
+                <!-- Jueves -->
+                <tr><td>Jueves</td><td>09:00 AM</td><td>Fuerza y Acondicionamiento</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Jueves</td><td>10:00 AM</td><td>Yoga</td><td>Franco Sosa</td></tr>
+                <tr><td>Jueves</td><td>11:00 AM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Jueves</td><td>12:00 PM</td><td>Spinning</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Jueves</td><td>04:00 PM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Jueves</td><td>04:00 PM</td><td>Abs</td><td>Nicolas Cabrera</td></tr>
+                <tr><td>Jueves</td><td>05:00 PM</td><td>Calistenia</td><td>Felipe Sutton</td></tr>
+                <tr><td>Jueves</td><td>06:00 PM</td><td>Entrenamiento Para Atletas</td><td>Mauro Castillo</td></tr>
+                <tr><td>Jueves</td><td>07:00 PM</td><td>Entrenamiento Para Pérdida de Peso</td><td>Dario Pérez</td></tr>
+
+                <!-- Viernes -->
+                <tr><td>Viernes</td><td>09:00 AM</td><td>Fuerza y Acondicionamiento</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Viernes</td><td>10:00 AM</td><td>Yoga</td><td>Franco Sosa</td></tr>
+                <tr><td>Viernes</td><td>11:00 AM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Viernes</td><td>12:00 PM</td><td>Spinning</td><td>Julieta Zacarro</td></tr>
+                <tr><td>Viernes</td><td>04:00 PM</td><td>Zumba</td><td>Silvia Puigs</td></tr>
+                <tr><td>Viernes</td><td>04:00 PM</td><td>Abs</td><td>Nicolas Cabrera</td></tr>
+                <tr><td>Viernes</td><td>05:00 PM</td><td>Calistenia</td><td>Felipe Sutton</td></tr>
+                <tr><td>Viernes</td><td>06:00 PM</td><td>Entrenamiento Para Atletas</td><td>Mauro Castillo</td></tr>
+                <tr><td>Viernes</td><td>07:00 PM</td><td>Entrenamiento Para Pérdida de Peso</td><td>Dario Pérez</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+       function filterSchedule() {
+            const daySelect = document.getElementById('day-select').value.toLowerCase();
+            const instructorSelect = document.getElementById('instructor-select').value.toLowerCase();
+            const timeSelect = document.getElementById('time-select').value.toLowerCase();
+            const classInput = document.getElementById('class-input').value.toLowerCase();
+            const scheduleBody = document.getElementById('schedule-body');
+            const rows = scheduleBody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const day = rows[i].getElementsByTagName('td')[0].textContent.toLowerCase();
+                const time = rows[i].getElementsByTagName('td')[1].textContent.toLowerCase();
+                const className = rows[i].getElementsByTagName('td')[2].textContent.toLowerCase();
+                const instructor = rows[i].getElementsByTagName('td')[3].textContent.toLowerCase();
+
+                if ((daySelect === "" || day.includes(daySelect)) &&
+                    (instructorSelect === "" || instructor.includes(instructorSelect)) &&
+                    (timeSelect === "" || time.includes(timeSelect)) &&
+                    (classInput === "" || className.includes(classInput))) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+        function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: gliten;
+    src: url(Gluten-VariableFont_slnt\,wght.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+nav {
+    background-color: black; /* Fondo transparente */
+    color: #fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97%;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Radio Canada Big", sans-serif;
+margin-left: 40px;
+margin-bottom: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    transition: max-height 0.3s ease-out;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Radio Canada Big", sans-serif;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu li a:hover {
+    background-color: rgba(85, 85, 85, 0.5); /* Fondo del hover transparente */
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 70px; /* Ajusta esto según la altura de tu navbar */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+    }
+
+    .menu.active {
+        max-height: 300px; /* Ajusta esta altura según sea necesario */
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu li a {
+        padding: 10px;
+        border-top: 1px solid rgba(68, 68, 68, 0.5); /* Línea superior transparente */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

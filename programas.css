@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poetsen+One&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+.programas {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.programas h1 {
+    font-weight: bold;
+    color:  #FFD700;
+  
+  font-size: 35px;
+  
+}
+
+.busqueda {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.busqueda select, .busqueda button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.busqueda button {
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+}
+
+.programas-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.programa {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.programa img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.programa h3 {
+    color: #FFD700;
+    margin-top: 10px;
+}
+
+.programa p {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #ddd;
+}
+
+@media (max-width: 900px) {
+    .principal h1 {
+        font-size: 14vw; /* Ajustar el tamaño para pantallas más pequeñas */
+    }
+    .programa {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .programa {
+        width: 100%;
+    }
+
+}
